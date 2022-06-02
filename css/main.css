@@ -99,7 +99,7 @@
 
 .main_slider figure {
     position: relative;
-    height: 600px;
+    height: 748px;
     color: #fff;
 }
 
@@ -155,10 +155,11 @@
 .main_slider figure .container a {
     display: inline-block;
     background: #333;
-    padding: 6px 30px 10px 30px;
+    padding: 10px 50px 12px 50px;
     color: #fff;
-    font-weight: 200;
+    font-weight: 400;
     letter-spacing: 0.025em;
+    text-shadow: none;
 
     opacity: 0;
     transform: translateY(100px);
@@ -167,10 +168,10 @@
 .main_slider figure.xxx .container a {
     opacity: 1;
     transform: translateY(0px);
-    transition: 0.5s 1s;
+    transition: transform 0.5s 1s, opacity 0.5s 1s;
 }
 
-.main_slider figure.xxx .container a:hover {
+.main_slider figure .container a:hover {
     background: #ddd;
     color: #333;
     border: 1px solid #000;
@@ -255,7 +256,7 @@
 }
 
 #content01 {
-    padding: 100px 0;
+    padding: 150px 0;
     text-align: center;
 }
 
@@ -269,7 +270,7 @@
 #content01 p {
     font-size: 14px;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     letter-spacing: -0.025em;
 }
 
@@ -277,16 +278,18 @@
     display: flex;
     width: 1200px;
     margin: 0 auto;
+    gap: 30px;
 }
 
 #content01 .container figure {
     flex: 1;
-    padding: 0 15px;
 }
 
 #content01 .container figure .case {
     overflow: hidden;
     margin-bottom: 20px;
+    border-radius: 30% 70% 59% 41% / 38% 55% 45% 62%
+        /* https://9elements.github.io/fancy-border-radius/ */
 }
 
 #content01 .container figure img {
@@ -313,4 +316,87 @@
 #content01 .container a:hover {
     background: #333;
     color: #fff;
+}
+
+#index_bg {
+    position: relative;
+    padding: 150px 0;
+    text-align: center;
+    background:
+        /*컬러위치*/
+        url(../img/mainvisual03.jpg) no-repeat fixed center center/cover;
+    filter: grayscale(1);
+    color: #f2f2f2;
+}
+
+#index_bg h2 {
+    margin: 0 0 40px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#index_bg p {
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#index_bg a {
+    position: absolute;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#index_bg i {
+    padding: 7px;
+    margin-left: 5px;
+    background: #000;
+    border-radius: 50%;
+}
+
+#movie01 {
+    padding: 100px 0;
+}
+
+#movie01 .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#movie01 .container>* {
+    flex: 1;
+    padding: 0 15px;
+}
+
+#movie01 video {
+    width: 100%;
+}
+
+#movie01 .txt {
+    padding: 50px 15px;
+}
+
+#movie01 .txt h2 {
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 40px;
+    letter-spacing: 0.5em;
+}
+
+#movie01 .txt p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+#movie01 .txt i {
+    padding: 10px;
+    border-radius: 50%;
+    background: #333;
+    font-size: 30px;
+    color: #fff;
+    margin-right: 20px;
 }

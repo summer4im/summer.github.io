@@ -18,6 +18,10 @@ $(function () {
         dots: true,
     });
 
+    $(".main_slider figure").eq(1).addClass("on");
+    $(".main_slider").on("afterChange", function (e, s, c) {
+        $(".main_slider figure").eq(c + 1).addClass("on").siblings().removeClass("on");
+    });
 
 })
 
